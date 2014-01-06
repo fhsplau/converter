@@ -31,14 +31,15 @@ public class Dec2Bin{
         StringBuilder bin = new StringBuilder();
         int minNumberOfBits = minimumNumberOfBits(dec);
         properNumberOfBits(numberOfBits, minNumberOfBits);
+        int numberOfExtraBits = numberOfBits - minNumberOfBits;
         if(dec == 0 || dec == 1)
             return bin.
-                    append(extraBits(numberOfBits,minNumberOfBits)).
+                    append(extraBits(numberOfExtraBits)).
                     append(dec).
                     toString();
         else
             return bin.
-                    append(extraBits(numberOfBits, minNumberOfBits)).
+                    append(extraBits(numberOfExtraBits)).
                     append(dec2binConversion(dec, minNumberOfBits)).
                     toString();
     }
@@ -55,9 +56,9 @@ public class Dec2Bin{
             throw new IllegalArgumentException("To less number of bits");
     }
 
-    protected StringBuilder extraBits(int numberOfBits, int minimumNumberOfBits) {
+    protected StringBuilder extraBits(int numberOfExtraBits) {
         StringBuilder extraBits= new StringBuilder();
-        for(int i = 0; i < numberOfBits-minimumNumberOfBits; i++)
+        for(int i = 0; i < numberOfExtraBits; i++)
             extraBits.append(0);
         return extraBits;
     }
@@ -69,9 +70,9 @@ public class Dec2Bin{
         return bin;
     }
 
-    protected int enableMostSignificantBit(int minimumNumberOfBits) {
+    protected int enableMostSignificantBit(int bitNumber) {
         int mostSignificantBit=1;
-        for(int i = 1; i < minimumNumberOfBits; i++)
+        for(int i = 1; i < bitNumber; i++)
             mostSignificantBit *= 2;
         return mostSignificantBit;
     }
