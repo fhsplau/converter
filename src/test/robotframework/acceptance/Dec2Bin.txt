@@ -1,0 +1,17 @@
+*** Settings ***
+Library           Converter
+
+*** Test Cases ***
+One input
+    ${input}    Set Variable    10
+    ${output}    Dec 2 Bin    ${input}
+    Should Be Equal As Strings    1010    ${output}
+
+Extra bits
+    ${input}    Set Variable    10
+    ${output}    dec2bin    ${input}    6
+    Should Be Equal As Strings    001010    ${output}
+
+To less bits
+    ${input}    Set Variable    10
+    Run Keyword And Expect Error    To less number of bits    dec2bin    ${input}    3

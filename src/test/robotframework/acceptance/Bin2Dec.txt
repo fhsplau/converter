@@ -1,0 +1,17 @@
+*** Settings ***
+Library           Converter
+
+*** Test Cases ***
+Convert binary to decimal
+    ${inputFirstDec}    Set Variable    10
+    ${inputSecondDec}    Set Variable    1001
+    ${outputFirst}    Bin 2 Dec    ${inputFirstDec}
+    ${outputSecond}    Bin 2 Dec    ${inputSecondDec}
+    Should Be Equal As Integers    ${outputFirst}    ${2}
+    Should Be Equal As Integers    ${outputSecond}    ${9}
+
+Improper Value
+    ${inputFirstDec}    Set Variable    20
+    ${inputSecondDec}    Set Variable    10p1
+    Run Keyword And Expect Error    Bad Value    Bin 2 Dec    ${inputFirstDec}
+    Run Keyword And Expect Error    Bad Value    Bin 2 Dec    ${inputSecondDec}
