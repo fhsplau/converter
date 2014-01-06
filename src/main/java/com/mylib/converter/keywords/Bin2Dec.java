@@ -10,9 +10,7 @@ import org.robotframework.javalib.annotation.ArgumentNames;
 @RobotKeywords
 public class Bin2Dec{
 
-    @RobotKeyword("Launches application with the given arguments.\n\n"
-            + "Example:\n"
-            + "| Launch Application | _com.acme.myapplication.MyApp_ | _--data-file_ | _C:\\data.txt_ |\n")
+    @RobotKeyword
     @ArgumentNames({"binaryValue"})
     public int bin2dec(String bin) {
 
