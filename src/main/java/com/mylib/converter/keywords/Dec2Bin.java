@@ -32,6 +32,7 @@ public class Dec2Bin{
         int minNumberOfBits = minimumNumberOfBits(dec);
         properNumberOfBits(numberOfBits, minNumberOfBits);
         int numberOfExtraBits = numberOfBits - minNumberOfBits;
+
         if(dec == 0 || dec == 1)
             return bin.
                     append(extraBits(numberOfExtraBits)).
