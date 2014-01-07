@@ -1,7 +1,7 @@
 package com.mylib.converter.keywords;
 
 /**
- * Created by kacprzakp on 1/3/14.
+ * Created by paverell on 1/3/14.
  */
 public class Dec2BinU2 extends Dec2Bin{
 

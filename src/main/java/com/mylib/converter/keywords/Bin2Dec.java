@@ -5,7 +5,7 @@ import org.robotframework.javalib.annotation.RobotKeywords;
 import org.robotframework.javalib.annotation.ArgumentNames;
 
 /**
- * Created by kacprzakp on 1/2/14.
+ * Created by paverell on 1/2/14.
  */
 @RobotKeywords
 public class Bin2Dec{

@@ -1,7 +1,7 @@
 package com.mylib.converter.keywords;
 
 /**
- * Created by kacprzakp on 1/6/14.
+ * Created by paverell on 1/6/14.
  */
 public class Dec2BinU1 extends Dec2Bin{
     public String dec2binU1(int dec, int numberOfBits) {
