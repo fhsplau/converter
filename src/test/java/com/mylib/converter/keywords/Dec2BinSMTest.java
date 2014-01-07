@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by kacprzakp on 1/6/14.
+ * Created by paverell on 1/6/14.
  */
 public class Dec2BinSMTest {
     private Dec2BinSM newInstance;
@@ -30,12 +30,12 @@ public class Dec2BinSMTest {
     }
 
     @Test
-    public void input_outpu(){
+    public void input_minusSevenAndFourBits_output_1111(){
         assertEquals("1111",newInstance.dec2binSM(-7, 4));
     }
 
     @Test
-    public void input_output(){
+    public void input_minusFiveAndEightBits_output_10000101(){
         assertEquals("10000101",newInstance.dec2binSM(-5, 8));
     }
 }

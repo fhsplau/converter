@@ -5,7 +5,7 @@ import org.junit.Test;
 import static junit.framework.Assert.*;
 
 /**
- * Created by kacprzakp on 1/3/14.
+ * Created by paverell on 1/3/14.
  */
 public class Dec2BinU2Test {
     private Dec2BinU2 newInstance;

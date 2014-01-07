@@ -7,7 +7,7 @@ import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
 
 /**
- * Created by kacprzakp on 12/19/13.
+ * Created by paverell on 12/19/13.
  */
 public class Dec2BinTest {
     private Dec2Bin newInstance;

@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by kacprzakp on 1/6/14.
+ * Created by paverell on 1/6/14.
  */
 public class Dec2BinU1Test {
     private Dec2BinU1 newInstance;
