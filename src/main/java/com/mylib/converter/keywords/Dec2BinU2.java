@@ -16,7 +16,7 @@ public class Dec2BinU2 extends Dec2Bin{
     private int sign = 0;
 
     @RobotKeyword
-    @ArgumentNames({"decimalValue","numberOfBits="})
+    @ArgumentNames({"decimalValue","numberOfBits"})
     public String dec2binU2(int dec, int numberOfBits) {
         String bin;
         StringBuilder binU2 = new StringBuilder();
@@ -37,10 +37,19 @@ public class Dec2BinU2 extends Dec2Bin{
     }
 
     private String dec2binU2Conversion(int dec, int numberOfBits) {
-        if (sign == 0)
-            return  dec2bin(dec);
-        else
-            return  dec2bin(enableMostSignificantBit(numberOfBits) + dec);
+        if(sign == 1)
+            dec +=enableMostSignificantBit(numberOfBits);
+        return dec2bin(dec);
+    }
+
+    @Override
+    public String dec2bin(int dec, int numberOfBits){
+        return super.dec2bin(dec,numberOfBits);
+    }
+
+    @Override
+    public String dec2bin(int dec){
+        return super.dec2bin(dec);
     }
 
 
