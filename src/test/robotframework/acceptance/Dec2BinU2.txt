@@ -1,0 +1,17 @@
+*** Settings ***
+Library           Converter
+
+*** Test Cases ***
+Positive number
+    ${input}    Set Variable    ${6}
+    ${output}    Dec 2 Bin U2    ${input}    ${5}
+    Should Be Equal As Strings    00110    ${output}
+
+Negative number
+    ${input}    Set Variable    ${-21}
+    ${output}    Dec 2 Bin U2    ${input}    ${6}
+    Should Be Equal As Strings    101011    ${output}
+
+To less bits
+    ${input}    Set Variable    ${5}
+    Run Keyword And Expect Error    To less number of bits    Dec 2 Bin U2    ${input}    ${3}
